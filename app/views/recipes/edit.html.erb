@@ -1,0 +1,24 @@
+<h1>Editing recipe</h1>
+
+<%= render "form", recipe: @recipe %>
+
+<br>
+
+<div>
+  <%= link_to "Show this recipe", @recipe %> |
+  <%= link_to "Back to recipes", recipes_path %>
+</div>
+
+<script>
+console.log('dsfsdf')
+CKEDITOR.disableAutoInline = true;
+  CKEDITOR.config.toolbar = [{
+	name: 'editing',
+	items: ['Scayt', 'Cut', 'Copy', 'Paste', 'Bold', 'Italic', 'Underline']
+}];
+
+CKEDITOR.replace('recipe_description', {
+  scayt_autoStartup: true,
+  grayt_autoStartup: true
+});
+</script>
